@@ -6,11 +6,11 @@
 Summary:	Gnome bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek Gnome
 Name:		python-gnome
-Version:	1.99.15
+Version:	1.99.16
 Release:	1
 License:	GPL
 Group:		Libraries/Python
-Source0:	ftp://ftp.gnome.org/pub/gnome/sources/gnome-python/1.99/%{module}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/1.99/%{module}-%{version}.tar.bz2
 BuildRequires:	gnome-panel-devel >= 2.0.9
 BuildRequires:	gnome-vfs2-devel >= 2.0.4
 BuildRequires:	libgnomeprintui-devel >= 2.2.1.1
@@ -266,8 +266,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files print-ui
 %defattr(644,root,root,755)
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomeprint/printui*.so
-%{py_sitedir}/gtk-2.0/gnomeprint/printui*.la
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomeprint/uimodule.so
+%{py_sitedir}/gtk-2.0/gnomeprint/uimodule.la
 
 %files ui
 %defattr(644,root,root,755)
