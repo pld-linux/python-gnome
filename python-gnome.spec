@@ -7,7 +7,7 @@ Summary:	Gnome bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek Gnome
 Name:		python-gnome
 Version:	1.99.13
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.gnome.org/pub/GNOME/2.0.2/sources/%{module}/%{module}-%{version}.tar.gz
@@ -86,7 +86,7 @@ GtkHtml bindings for Python.
 %package nautilus
 Summary:	Nautilus bindings for Python
 Group:		Libraries/Python
-Requires:	python-bonobo-ui = %{version}
+Requires:	%{name}-bonobo-ui = %{version}
 
 %description nautilus
 Nautilus bindings for Python.
@@ -94,7 +94,7 @@ Nautilus bindings for Python.
 %package ui
 Summary:	Gnome User Interface bindings for Python
 Group:		Libraries/Python
-Requires:	python-bonobo-ui = %{version}
+Requires:	%{name}-bonobo-ui = %{version}
 
 %description ui
 Gnome User Interface bindings for Python.
@@ -119,8 +119,8 @@ Gnome terminal bindings for Python.
 Summary:	Development files for Gnome bindings for Python
 Group:		Libraries/Python
 Requires:	python-pygtk-devel >= 1.99.13
-Requires:	python-bonobo = %{version}
-Requires:	python-bonobo-ui = %{version}
+Requires:	%{name}-bonobo = %{version}
+Requires:	%{name}-bonobo-ui = %{version}
 Requires:	%{name}-applet = %{version}
 Requires:	%{name}-canvas = %{version}
 Requires:	%{name}-gconf = %{version}
