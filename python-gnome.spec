@@ -8,7 +8,7 @@ Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.0.0
-Release:	3
+Release:	4
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{module}/2.0/%{module}-%{version}.tar.bz2
@@ -24,7 +24,7 @@ BuildRequires:	python-pyorbit-devel >= %{pyorbit_req}
 BuildRequires:	python-pygtk-devel >= %{pygtk_req}
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
-Requires:	python-pygtk-gobject >= pygtk_req
+Requires:	python-pygtk-gobject >= %{pygtk_req}
 Obsoletes:	%{module}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -53,8 +53,8 @@ Wi±zania Pythona do biblioteki Bonobo.
 Summary:	Bonobo User Interface bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki interfejsu u¿ytkownika Bonobo
 Group:		Libraries/Python
-Requires:	%{name}-bonobo = %{version}
-Requires:	%{name}-canvas = %{version}
+Requires:	%{name}-bonobo = %{version}-%{release}
+Requires:	%{name}-canvas = %{version}-%{release}
 
 %description bonobo-ui
 Bonobo User Interface bindings for Python.
@@ -66,7 +66,7 @@ Wi±zania Pythona do biblioteki interfejsu u¿ytkownika Bonobo.
 Summary:	GNOME Applet bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki GNOME Applet
 Group:		Libraries/Python
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	python-pygtk-gtk >= %{pygtk_req}
 
 %description applet
@@ -79,7 +79,7 @@ Wi±zania Pythona do biblioteki GNOME Applet.
 Summary:	GNOME Canvas bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki GNOME Canvas
 Group:		Libraries/Python
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	python-pygtk-gtk >= %{pygtk_req}
 
 %description canvas
@@ -116,7 +116,7 @@ Wi±zania Pythona do biblioteki GtkHtml.
 Summary:	Nautilus bindings for Python
 Summary(pl):	Wi±zania Pythona do Nautilusa
 Group:		Libraries/Python
-Requires:	%{name}-bonobo-ui = %{version}
+Requires:	%{name}-bonobo-ui = %{version}-%{release}
 
 %description nautilus
 Nautilus bindings for Python.
@@ -128,7 +128,7 @@ Wi±zania Pythona do Nautilusa.
 Summary:	GNOME Print bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki GNOME obs³ugi drukowania
 Group:		Libraries/Python
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	python-pygtk-pango >= %{pygtk_req}
 
 %description print
@@ -141,8 +141,8 @@ Wi±zania Pythona do biblioteki GNOME obs³ugi drukowania.
 Summary:	GNOME Print User Interface bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki interfejsu u¿ytkownika GNOME obs³ugi drukowania
 Group:		Libraries/Python
-Requires:	%{name}-canvas = %{version}
-Requires:	%{name}-print = %{version}
+Requires:	%{name}-canvas = %{version}-%{release}
+Requires:	%{name}-print = %{version}-%{release}
 
 %description print-ui
 GNOME Print User Interface bindings for Python.
@@ -155,7 +155,7 @@ drukowania.
 Summary:	GNOME User Interface bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki interfejsu u¿ytkownika GNOME
 Group:		Libraries/Python
-Requires:	%{name}-bonobo-ui = %{version}
+Requires:	%{name}-bonobo-ui = %{version}-%{release}
 
 %description ui
 GNOME User Interface bindings for Python.
@@ -167,7 +167,7 @@ Wi±zania Pythona do biblioteki interfejsu u¿ytkownika GNOME.
 Summary:	GNOME VFS bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki GNOME VFS
 Group:		Libraries/Python
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description vfs
 GNOME VFS bindings for Python.
@@ -179,17 +179,17 @@ Wi±zania Pythona do biblioteki GNOME VFS.
 Summary:	Development files for GNOME bindings for Python
 Summary(pl):	Pliki programistyczne wi±zañ Pythona do GNOME
 Group:		Libraries/Python
-Requires:	%{name}-applet = %{version}
-Requires:	%{name}-bonobo = %{version}
-Requires:	%{name}-bonobo-ui = %{version}
-Requires:	%{name}-canvas = %{version}
-Requires:	%{name}-gconf = %{version}
-Requires:	%{name}-gtkhtml = %{version}
-Requires:	%{name}-nautilus = %{version}
-Requires:	%{name}-print = %{version}
-Requires:	%{name}-print-ui = %{version}
-Requires:	%{name}-ui = %{version}
-Requires:	%{name}-vfs = %{version}
+Requires:	%{name}-applet = %{version}-%{release}
+Requires:	%{name}-bonobo = %{version}-%{release}
+Requires:	%{name}-bonobo-ui = %{version}-%{release}
+Requires:	%{name}-canvas = %{version}-%{release}
+Requires:	%{name}-gconf = %{version}-%{release}
+Requires:	%{name}-gtkhtml = %{version}-%{release}
+Requires:	%{name}-nautilus = %{version}-%{release}
+Requires:	%{name}-print = %{version}-%{release}
+Requires:	%{name}-print-ui = %{version}-%{release}
+Requires:	%{name}-ui = %{version}-%{release}
+Requires:	%{name}-vfs = %{version}-%{release}
 Requires:	python-pygtk-devel >= %{pygtk_req}
 
 %description devel
