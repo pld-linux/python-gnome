@@ -8,7 +8,7 @@ Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.0.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{module}/2.0/%{module}-%{version}.tar.bz2
@@ -19,7 +19,7 @@ BuildRequires:	libgnomeprintui-devel >= 2.2.1.1
 BuildRequires:	libgtkhtml-devel >= 2.0.2
 BuildRequires:	nautilus-devel >= 2.0.7
 BuildRequires:	pkgconfig
-BuildRequires:	python-devel >= 2.2.1
+BuildRequires:	python-devel >= 2.3.2
 BuildRequires:	python-pyorbit-devel >= %{pyorbit_req}
 BuildRequires:	python-pygtk-devel >= %{pygtk_req}
 BuildRequires:	rpm-pythonprov
