@@ -7,7 +7,7 @@ Summary:	Gnome bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek Gnome
 Name:		python-gnome
 Version:	1.99.13
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.gnome.org/pub/GNOME/2.0.2/sources/%{module}/%{module}-%{version}.tar.gz
@@ -36,22 +36,31 @@ Wi±zania Pythona do bibliotek Gnome.
 
 %package bonobo
 Summary:	Bonobo bindings for Python
+Summary(pl):	Wi±zania Pythona do biblioteki Bonobo
 Group:		Libraries/Python
 Requires:	python-pygtk-gobject
 
 %description bonobo
 Bonobo bindings for Python.
 
+%description bonobo -l pl
+Wi±zania Pythona do biblioteki Bonobo.
+
 %package bonobo-ui
 Summary:	Bonobo User Interface bindings for Python
+Summary(pl):	Wi±zania Pythona do biblioteki interfejsu u¿ytkownika Bonobo
 Group:		Libraries/Python
 Requires:	%{name}-canvas = %{version}
 
 %description bonobo-ui
 Bonobo User Interface bindings for Python.
 
+%description bonobo-ui -l pl
+Wi±zania Pythona do biblioteki interfejsu u¿ytkownika Bonobo.
+
 %package applet
 Summary:	Gnome Applet bindings for Python
+Summary(pl):	Wi±zania Pythona do biblioteki Gnome Applet
 Group:		Libraries/Python
 Requires:	python-pygtk-gtk
 Requires:	%{name} = %{version}
@@ -59,64 +68,96 @@ Requires:	%{name} = %{version}
 %description applet
 Gnome Applet bindings for Python.
 
+%description applet -l pl
+Wi±zania Pythona do biblioteki Gnome Applet.
+
 %package canvas
 Summary:	Gnome Canvas bindings for Python
+Summary(pl):	Wi±zania Pythona do biblioteki Gnome Canvas
 Group:		Libraries/Python
 Requires:	%{name} = %{version}
 
 %description canvas
 Gnome Canvas bindings for Python.
 
+%description canvas -l pl
+Wi±zania Pythona do biblioteki Gnome Canvas.
+
 %package gconf
 Summary:	GConf bindings for Python
+Summary(pl):	Wi±zania Pythona do biblioteki GConf
 Group:		Libraries/Python
 Requires:	python-pygtk-gobject
 
 %description gconf
 GConf bindings for Python.
 
+%description gconf -l pl
+Wi±zania Pythona do biblioteki GConf.
+
 %package gtkhtml
 Summary:	GtkHtml bindings for Python
+Summary(pl):	Wi±zania Pythona do biblioteki GtkHtml
 Group:		Libraries/Python
 Requires:	python-pygtk-gobject
 
 %description gtkhtml
 GtkHtml bindings for Python.
 
+%description gtkhtml -l pl
+Wi±zania Pythona do biblioteki GtkHtml.
+
 %package nautilus
 Summary:	Nautilus bindings for Python
+Summary(pl):	Wi±zania Pythona do Nautilusa
 Group:		Libraries/Python
 Requires:	%{name}-bonobo-ui = %{version}
 
 %description nautilus
 Nautilus bindings for Python.
 
+%description nautilus -l pl
+Wi±zania Pythona do Nautilusa.
+
 %package ui
 Summary:	Gnome User Interface bindings for Python
+Summary(pl):	Wi±zania Pythona do biblioteki interfejsu u¿ytkownika Gnome
 Group:		Libraries/Python
 Requires:	%{name}-bonobo-ui = %{version}
 
 %description ui
 Gnome User Interface bindings for Python.
 
+%description ui -l pl
+Wi±zania Pythona do biblioteki interfejsu u¿ytkownika Gnome.
+
 %package vfs
 Summary:	Gnome VFS bindings for Python
+Summary(pl):	Wi±zania Pythona do biblioteki Gnome VFS
 Group:		Libraries/Python
 Requires:	%{name} = %{version}
 
 %description vfs
 Gnome VFS bindings for Python.
 
+%description vfs -l pl
+Wi±zania Pythona do biblioteki Gnome VFS.
+
 %package zvt
 Summary:	Gnome terminal widget bindings for Python
+Summary(pl):	Wi±zania Pythona do biblioteki terminala Gnome
 Group:		Libraries/Python
 Requires:	python-pygtk-gtk
 
 %description zvt
 Gnome terminal bindings for Python.
 
+%description zvt -l pl
+Wi±zania Pythona do biblioteki terminala Gnome.
+
 %package devel
 Summary:	Development files for Gnome bindings for Python
+Summary(pl):	Pliki programistyczne wi±zañ Pythona do Gnome
 Group:		Libraries/Python
 Requires:	python-pygtk-devel >= 1.99.13
 Requires:	%{name}-bonobo = %{version}
@@ -132,6 +173,9 @@ Requires:	%{name}-zvt = %{version}
 
 %description devel
 Development files for Gnome bindings for Python.
+
+%description devel -l pl
+Pliki programistyczne wi±zañ Pythona do Gnome.
 
 %prep
 %setup -q -n %{module}-%{version}
