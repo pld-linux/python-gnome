@@ -1,7 +1,7 @@
 
 %include	/usr/lib/rpm/macros.python
 
-%define		module	gnome-python
+%define		module		gnome-python
 %define		pygtk_req	1:2.0.0
 %define		pyorbit_req	2.0.0
 Summary:	GNOME bindings for Python
