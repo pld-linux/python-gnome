@@ -7,7 +7,7 @@ Summary:	Gnome bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek Gnome
 Name:		python-gnome
 Version:	1.99.13
-Release:	3
+Release:	4
 License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.gnome.org/pub/GNOME/2.0.2/sources/%{module}/%{module}-%{version}.tar.gz
@@ -51,6 +51,7 @@ Summary:	Bonobo User Interface bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki interfejsu u¿ytkownika Bonobo
 Group:		Libraries/Python
 Requires:	%{name}-canvas = %{version}
+Requires:	%{name}-bonobo = %{version}
 
 %description bonobo-ui
 Bonobo User Interface bindings for Python.
