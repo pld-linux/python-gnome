@@ -17,8 +17,8 @@ BuildRequires:	libgnomeprintui-devel >= 2.2.1.1
 BuildRequires:	libgtkhtml-devel >= 2.0.2
 BuildRequires:	nautilus-devel >= 2.0.7
 BuildRequires:	python-devel >= 2.2.1
-BuildRequires:	python-pyorbit-devel >= 1.99.3
-BuildRequires:	python-pygtk-devel >= 1.99.15
+BuildRequires:	python-pyorbit-devel >= 1.99.4
+BuildRequires:	python-pygtk-devel >= 1.99.16
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
