@@ -42,6 +42,25 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README ChangeLog
-%attr(755,root,root) %{_bindir}/*
-%{_datadir}/%{name}
+%doc ChangeLog AUTHORS
+%attr(755,root,root) %{py_sitedir}/gconfmodule.*
+%attr(755,root,root) %{py_sitedir}/gtkhtml2module.*
+%dir %{py_sitedir}/gnome
+%attr(755,root,root) %{py_sitedir}/gnome/_gnomemodule.*
+%attr(755,root,root) %{py_sitedir}/gnome/appletmodule.*
+%attr(755,root,root) %{py_sitedir}/gnome/canvasmodule.*
+%attr(755,root,root) %{py_sitedir}/gnome/nautilusmodule.*
+%attr(755,root,root) %{py_sitedir}/gnome/uimodule.*
+%attr(755,root,root) %{py_sitedir}/gnome/vfsmodule.*
+%attr(755,root,root) %{py_sitedir}/gnome/zvtmodule.*
+%{py_sitedir}/gnome/__init__.py?
+%dir %{py_sitedir}/bonobo
+%attr(755,root,root) %{py_sitedir}/bonobo/_bonobomodule.*
+%attr(755,root,root) %{py_sitedir}/bonobo/activationmodule.*
+%attr(755,root,root) %{py_sitedir}/bonobo/uimodule.*
+%{py_sitedir}/bonobo/__init__.py?
+
+#file devel
+%defattr(644,root,root,755)
+%{_datadir}/pygtk/2.0/defs/*
+%{_pkgconfigdir}/*
