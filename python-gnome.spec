@@ -1,10 +1,9 @@
-
 %include	/usr/lib/rpm/macros.python
 
 %define		module	gnome-python
 
 Summary:	Gnome bindings for Python
-Summary(pl):	Wi±zania Pythona do bibliotek Gnome 
+Summary(pl):	Wi±zania Pythona do bibliotek Gnome
 Name:		python-gnome
 Version:	1.99.11
 Release:	1
@@ -12,18 +11,18 @@ License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/%{module}/%{module}-%{version}.tar.gz
 BuildRequires:	python-devel >= 2.2.1
-BuildRequires:	rpm-pythonprov
-BuildRequires:	python-pygtk-devel >= 1.99.11
 BuildRequires:	python-orbit-devel >= 1.99.0
+BuildRequires:	python-pygtk-devel >= 1.99.11
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 Obsoletes:	%{module}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-N/A
+Gnome bindings for Python.
 
 %description -l pl
-N/A
+Wi±zania Pythona do bibliotek Gnome.
 
 %prep
 %setup -q -n %{module}-%{version}
