@@ -2,17 +2,17 @@
 %include	/usr/lib/rpm/macros.python
 
 %define		module	gnome-python
-%define		pygtk_req	1:1.99.16
-%define		pyorbit_req	1.99.4
+%define		pygtk_req	1:1.99.18
+%define		pyorbit_req	1.99.7
 Summary:	Gnome bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek Gnome
 Name:		python-gnome
-Version:	1.99.16
-Release:	2
+Version:	1.99.18
+Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/1.99/%{module}-%{version}.tar.bz2
-# Source0-md5:	93634d31730b3495a36750101b17c987
+# Source0-md5:	2f485025f25cc9b27e4515f01e9955c3
 BuildRequires:	gnome-panel-devel >= 2.0.9
 BuildRequires:	gnome-vfs2-devel >= 2.0.4
 BuildRequires:	libgnomeprintui-devel >= 2.2.1.1
@@ -53,8 +53,8 @@ Wi±zania Pythona do biblioteki Bonobo.
 Summary:	Bonobo User Interface bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki interfejsu u¿ytkownika Bonobo
 Group:		Libraries/Python
-Requires:	%{name}-canvas = %{version}
 Requires:	%{name}-bonobo = %{version}
+Requires:	%{name}-canvas = %{version}
 
 %description bonobo-ui
 Bonobo User Interface bindings for Python.
@@ -179,10 +179,9 @@ Wi±zania Pythona do biblioteki Gnome VFS.
 Summary:	Development files for Gnome bindings for Python
 Summary(pl):	Pliki programistyczne wi±zañ Pythona do Gnome
 Group:		Libraries/Python
-Requires:	python-pygtk-devel >= %{pygtk_req}
+Requires:	%{name}-applet = %{version}
 Requires:	%{name}-bonobo = %{version}
 Requires:	%{name}-bonobo-ui = %{version}
-Requires:	%{name}-applet = %{version}
 Requires:	%{name}-canvas = %{version}
 Requires:	%{name}-gconf = %{version}
 Requires:	%{name}-gtkhtml = %{version}
@@ -191,6 +190,7 @@ Requires:	%{name}-print = %{version}
 Requires:	%{name}-print-ui = %{version}
 Requires:	%{name}-ui = %{version}
 Requires:	%{name}-vfs = %{version}
+Requires:	python-pygtk-devel >= %{pygtk_req}
 
 %description devel
 Development files for Gnome bindings for Python.
@@ -211,7 +211,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{py_sitedir}/gtk-2.0/{*.la,*/*.la}
+rm -f $RPM_BUILD_ROOT%{py_sitedir}/gtk-2.0/{*.la,*/{*.la,*.py}}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -260,12 +260,12 @@ rm -rf $RPM_BUILD_ROOT
 %files print
 %defattr(644,root,root,755)
 %dir %{py_sitedir}/gtk-2.0/gnomeprint
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomeprint/_printmod*.so
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomeprint/_print*.so
 %{py_sitedir}/gtk-2.0/gnomeprint/*.py[co]
 
 %files print-ui
 %defattr(644,root,root,755)
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomeprint/uimodule.so
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomeprint/ui.so
 
 %files ui
 %defattr(644,root,root,755)
