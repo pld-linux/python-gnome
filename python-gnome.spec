@@ -6,19 +6,18 @@
 Summary:	Gnome bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek Gnome
 Name:		python-gnome
-Version:	1.99.13
-Release:	5
+Version:	1.99.14
+Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.gnome.org/pub/gnome/sources/gnome-python/1.99/%{module}-%{version}.tar.bz2
 BuildRequires:	gnome-panel-devel >= 2.0.9
 BuildRequires:	gnome-vfs2-devel >= 2.0.4
 BuildRequires:	libgtkhtml-devel >= 2.0.2
-BuildRequires:	libzvt-devel >= 2.0.1
 BuildRequires:	nautilus-devel >= 2.0.7
 BuildRequires:	python-devel >= 2.2.1
-BuildRequires:	python-orbit-devel >= 1.99.0
-BuildRequires:	python-pygtk-devel >= 1.99.13
+BuildRequires:	python-pyorbit-devel >= 1.99.3
+BuildRequires:	python-pygtk-devel >= 1.99.14
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
@@ -144,18 +143,6 @@ Gnome VFS bindings for Python.
 %description vfs -l pl
 Wi±zania Pythona do biblioteki Gnome VFS.
 
-%package zvt
-Summary:	Gnome terminal widget bindings for Python
-Summary(pl):	Wi±zania Pythona do biblioteki terminala Gnome
-Group:		Libraries/Python
-Requires:	python-pygtk-gtk
-
-%description zvt
-Gnome terminal bindings for Python.
-
-%description zvt -l pl
-Wi±zania Pythona do biblioteki terminala Gnome.
-
 %package devel
 Summary:	Development files for Gnome bindings for Python
 Summary(pl):	Pliki programistyczne wi±zañ Pythona do Gnome
@@ -170,7 +157,6 @@ Requires:	%{name}-gtkhtml = %{version}
 Requires:	%{name}-nautilus = %{version}
 Requires:	%{name}-ui = %{version}
 Requires:	%{name}-vfs = %{version}
-Requires:	%{name}-zvt = %{version}
 
 %description devel
 Development files for Gnome bindings for Python.
@@ -253,13 +239,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/vfs*.so
 %{py_sitedir}/gtk-2.0/gnome/vfs*.la
 
-%files zvt
-%defattr(644,root,root,755)
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/zvt*.so
-%{py_sitedir}/gtk-2.0/gnome/zvt*.la
-
 %files devel
 %defattr(644,root,root,755)
 %{pydefsdir}/*
-%{_datadir}/pygtk/2.0/defs/*
 %{_pkgconfigdir}/*
