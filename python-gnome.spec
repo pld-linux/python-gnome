@@ -8,7 +8,7 @@ Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.0.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{module}/2.0/%{module}-%{version}.tar.bz2
