@@ -2,17 +2,17 @@
 %include	/usr/lib/rpm/macros.python
 
 %define		module	gnome-python
-%define		pygtk_req	1:1.99.18
-%define		pyorbit_req	1.99.7
+%define		pygtk_req	1:2.0.0
+%define		pyorbit_req	2.0.0
 Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
-Version:	1.99.18
-Release:	2
+Version:	2.0.0
+Release:	1
 License:	GPL
 Group:		Libraries/Python
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/1.99/%{module}-%{version}.tar.bz2
-# Source0-md5:	2f485025f25cc9b27e4515f01e9955c3
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{module}/2.0/%{module}-%{version}.tar.bz2
+# Source0-md5:	48304c0865f74db33291115011bd08d5
 BuildRequires:	gnome-panel-devel >= 2.0.9
 BuildRequires:	gnome-vfs2-devel >= 2.0.4
 BuildRequires:	libgnomeprintui-devel >= 2.2.1.1
