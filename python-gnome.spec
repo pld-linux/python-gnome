@@ -8,11 +8,12 @@ Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.0.0
-Release:	4
+Release:	5
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{module}/2.0/%{module}-%{version}.tar.bz2
 # Source0-md5:	48304c0865f74db33291115011bd08d5
+BuildRequires:	automake
 BuildRequires:	gnome-panel-devel >= 2.0.9
 BuildRequires:	gnome-vfs2-devel >= 2.0.4
 BuildRequires:	libgnomeprintui-devel >= 2.2.1.1
@@ -202,6 +203,7 @@ Pliki programistyczne wi±zañ Pythona do GNOME.
 %setup -q -n %{module}-%{version}
 
 %build
+cp -f /usr/share/automake/config.* .
 %configure
 %{__make}
 
