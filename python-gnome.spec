@@ -1,9 +1,4 @@
 
-#
-# todo:
-# - proper install requirements
-#
-
 %include	/usr/lib/rpm/macros.python
 
 %define		module	gnome-python
