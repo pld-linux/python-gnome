@@ -1,5 +1,5 @@
 %define		module		gnome-python
-%define		pygtk_req	1:2.3.96
+%define		pygtk_req	2:2.3.96
 %define		pyorbit_req	2.0.0
 Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
