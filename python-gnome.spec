@@ -202,61 +202,61 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{py_sitedir}/gtk-2.0/gnome
 %{py_sitedir}/gtk-2.0/gnome/__init__.py?
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/_gnome*.so
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/_gnome*.la
+%{py_sitedir}/gtk-2.0/gnome/_gnome*.la
 
 %files bonobo
 %defattr(644,root,root,755)
 %dir %{py_sitedir}/gtk-2.0/bonobo
 %{py_sitedir}/gtk-2.0/bonobo/__init__.py?
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/bonobo/_bonobo*.so
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/bonobo/_bonobo*.la
+%{py_sitedir}/gtk-2.0/bonobo/_bonobo*.la
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/bonobo/activation*.so
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/bonobo/activation*.la
+%{py_sitedir}/gtk-2.0/bonobo/activation*.la
 
 %files bonobo-ui
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/bonobo/ui*.so
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/bonobo/ui*.la
+%{py_sitedir}/gtk-2.0/bonobo/ui*.la
 
 %files applet
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/applet*.so
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/applet*.la
+%{py_sitedir}/gtk-2.0/gnome/applet*.la
 
 %files canvas
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/canvas*.so
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/canvas*.la
+%{py_sitedir}/gtk-2.0/gnome/canvas*.la
 
 %files gconf
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gconf*.so
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gconf*.la
+%{py_sitedir}/gtk-2.0/gconf*.la
 
 %files gtkhtml
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gtkhtml*.so
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gtkhtml*.la
+%{py_sitedir}/gtk-2.0/gtkhtml*.la
 
 %files nautilus
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/nautilus*.so
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/nautilus*.la
+%{py_sitedir}/gtk-2.0/gnome/nautilus*.la
 
 %files ui
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/ui*.so
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/ui*.la
+%{py_sitedir}/gtk-2.0/gnome/ui*.la
 
 %files vfs
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/vfs*.so
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/vfs*.la
+%{py_sitedir}/gtk-2.0/gnome/vfs*.la
 
 %files zvt
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/zvt*.so
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/zvt*.la
+%{py_sitedir}/gtk-2.0/gnome/zvt*.la
 
 %files devel
 %defattr(644,root,root,755)
