@@ -10,7 +10,7 @@ Version:	1.99.11
 Release:	1
 License:	GPL
 Group:		Libraries/Python
-Source0:	ftp://ftp.gnome.org/pub/GNOME/earthquake/sources/%{module}/%{module}-%{version}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/%{module}/%{module}-%{version}.tar.gz
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	rpm-pythonprov
 BuildRequires:	python-pygtk-devel >= 1.99.11
