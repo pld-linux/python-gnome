@@ -11,6 +11,7 @@ Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/1.99/%{module}-%{version}.tar.bz2
+# Source0-md5:	93634d31730b3495a36750101b17c987
 BuildRequires:	gnome-panel-devel >= 2.0.9
 BuildRequires:	gnome-vfs2-devel >= 2.0.4
 BuildRequires:	libgnomeprintui-devel >= 2.2.1.1
