@@ -1,15 +1,15 @@
 %define		module		gnome-python
-%define		pygtk_req	2:2.5.3
+%define		pygtk_req	2:2.6.0
 %define		pyorbit_req	2.0.1
 Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
-Version:	2.9.5
+Version:	2.10.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.9/%{module}-%{version}.tar.bz2
-# Source0-md5:	18d3f379ca4cb7b5a252c62d6ec8fd8e
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.10/%{module}-%{version}.tar.bz2
+# Source0-md5:	018c210bc5e2e9be36791bede9dbdc73
 BuildRequires:	GConf2-devel >= 2.9.90
 BuildRequires:	automake
 BuildRequires:	autoconf
