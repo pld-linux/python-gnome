@@ -6,18 +6,19 @@
 Summary:	Gnome bindings for Python
 Summary(pl):	Wi您ania Pythona do bibliotek Gnome
 Name:		python-gnome
-Version:	1.99.14
+Version:	1.99.15
 Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.gnome.org/pub/gnome/sources/gnome-python/1.99/%{module}-%{version}.tar.bz2
 BuildRequires:	gnome-panel-devel >= 2.0.9
 BuildRequires:	gnome-vfs2-devel >= 2.0.4
+BuildRequires:	libgnomeprintui-devel >= 2.2.1.1
 BuildRequires:	libgtkhtml-devel >= 2.0.2
 BuildRequires:	nautilus-devel >= 2.0.7
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	python-pyorbit-devel >= 1.99.3
-BuildRequires:	python-pygtk-devel >= 1.99.14
+BuildRequires:	python-pygtk-devel >= 1.99.15
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
@@ -119,6 +120,31 @@ Nautilus bindings for Python.
 %description nautilus -l pl
 Wi您ania Pythona do Nautilusa.
 
+%package print
+Summary:	Gnome Print bindings for Python
+Summary(pl):	Wi您ania Pythona do biblioteki Gnome obs逝gi drukowania
+Group:		Libraries/Python
+Requires:	%{name} = %{version}
+
+%description print
+Gnome Print bindings for Python.
+
+%description print -l pl
+Wi您ania Pythona do biblioteki Gnome obs逝gi drukowania.
+
+%package print-ui
+Summary:	Gnome Print User Interface bindings for Python
+Summary(pl):	Wi您ania Pythona do biblioteki interfejsu u篡tkownika Gnome obs逝gi drukowania
+Group:		Libraries/Python
+Requires:	%{name}-ui = %{version}
+
+%description print-ui
+Gnome Print User Interface bindings for Python.
+
+%description print-ui -l pl
+Wi您ania Pythona do biblioteki interfejsu u篡tkownika Gnome obs逝gi
+drukowania.
+
 %package ui
 Summary:	Gnome User Interface bindings for Python
 Summary(pl):	Wi您ania Pythona do biblioteki interfejsu u篡tkownika Gnome
@@ -155,6 +181,8 @@ Requires:	%{name}-canvas = %{version}
 Requires:	%{name}-gconf = %{version}
 Requires:	%{name}-gtkhtml = %{version}
 Requires:	%{name}-nautilus = %{version}
+Requires:	%{name}-print = %{version}
+Requires:	%{name}-print-ui = %{version}
 Requires:	%{name}-ui = %{version}
 Requires:	%{name}-vfs = %{version}
 
@@ -228,6 +256,18 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/nautilus*.so
 %{py_sitedir}/gtk-2.0/gnome/nautilus*.la
+
+%files print
+%defattr(644,root,root,755)
+%dir %{py_sitedir}/gtk-2.0/gnomeprint
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomeprint/_printmod*.so
+%{py_sitedir}/gtk-2.0/gnomeprint/_printmod*.la
+%{py_sitedir}/gtk-2.0/gnomeprint/*.py[co]
+
+%files print-ui
+%defattr(644,root,root,755)
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomeprint/printui*.so
+%{py_sitedir}/gtk-2.0/gnomeprint/printui*.la
 
 %files ui
 %defattr(644,root,root,755)
