@@ -25,7 +25,6 @@ BuildRequires:	python-pyorbit-devel >= %{pyorbit_req}
 BuildRequires:	python-pygtk-devel >= %{pygtk_req}
 BuildRequires:	rpmbuild(macros) >= 1.197
 %pyrequires_eq	python-modules
-Requires(post,postun):	/sbin/ldconfig
 Requires:	python-pygtk-gobject >= %{pygtk_req}
 Obsoletes:	gnome-python
 Obsoletes:	gnome-python-nautilus
