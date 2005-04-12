@@ -14,16 +14,18 @@ BuildRequires:	GConf2-devel >= 2.9.90
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRequires:	gnome-common >= 2.8.0
-BuildRequires:	gnome-vfs2-devel >= 2.9.90
-BuildRequires:	gtk+2-devel >= 2:2.6.2
+BuildRequires:	gnome-vfs2-devel >= 2.10.0-2
+BuildRequires:	gtk+2-devel >= 2:2.6.4
 BuildRequires:	libbonobo-devel >= 2.8.1
-BuildRequires:	libgnomeui-devel >= 2.9.1
+BuildRequires:	libgnomeui-devel >= 2.10.0-2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	python-devel >= 1:2.3.2
 BuildRequires:	python-pyorbit-devel >= %{pyorbit_req}
 BuildRequires:	python-pygtk-devel >= %{pygtk_req}
+BuildRequires:	rpmbuild(macros) >= 1.197
 %pyrequires_eq	python-modules
+Requires(post,postun):	/sbin/ldconfig
 Requires:	python-pygtk-gobject >= %{pygtk_req}
 Obsoletes:	gnome-python
 Obsoletes:	gnome-python-nautilus
@@ -153,8 +155,11 @@ rm -f $RPM_BUILD_ROOT%{py_sitedir}/gtk-2.0/{*.la,*/{*.la,*.py}}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p /sbin/ldconfig
-%postun	-p /sbin/ldconfig
+%post
+%ldconfig_post
+
+%postun
+%ldconfig_postun
 
 %files
 %defattr(644,root,root,755)
