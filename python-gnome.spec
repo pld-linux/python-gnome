@@ -5,7 +5,7 @@ Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.10.0
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.10/%{module}-%{version}.tar.bz2
@@ -28,6 +28,7 @@ BuildRequires:	rpmbuild(macros) >= 1.197
 Requires:	python-pygtk-gobject >= %{pygtk_req}
 Obsoletes:	gnome-python
 Obsoletes:	gnome-python-nautilus
+Obsoletes:	python-gnome-nautilus
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define pydefsdir %(pkg-config --variable=defsdir pygtk-2.0)
