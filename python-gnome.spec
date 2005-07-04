@@ -107,6 +107,7 @@ Summary:	GNOME VFS bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki GNOME VFS
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
+Requires:	gnome-vfs2
 
 %description vfs
 GNOME VFS bindings for Python.
@@ -124,7 +125,6 @@ Requires:	%{name}-canvas = %{version}-%{release}
 Requires:	%{name}-gconf = %{version}-%{release}
 Requires:	%{name}-ui = %{version}-%{release}
 Requires:	%{name}-vfs = %{version}-%{release}
-Requires:	gnome-vfs2
 Requires:	python-pygtk-devel >= %{pygtk_req}
 
 %description devel
