@@ -4,12 +4,12 @@
 Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
-Version:	2.10.0
-Release:	2
+Version:	2.11.2
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.10/%{module}-%{version}.tar.bz2
-# Source0-md5:	018c210bc5e2e9be36791bede9dbdc73
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.11/%{module}-%{version}.tar.bz2
+# Source0-md5:	3db86d8b0df4bb36e274f3a3aa8b5f0d
 BuildRequires:	GConf2-devel >= 2.9.90
 BuildRequires:	automake
 BuildRequires:	autoconf
@@ -124,6 +124,7 @@ Requires:	%{name}-canvas = %{version}-%{release}
 Requires:	%{name}-gconf = %{version}-%{release}
 Requires:	%{name}-ui = %{version}-%{release}
 Requires:	%{name}-vfs = %{version}-%{release}
+Requires:	gnome-vfs2
 Requires:	python-pygtk-devel >= %{pygtk_req}
 
 %description devel
@@ -151,6 +152,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{py_sitedir}/gtk-2.0/{*.la,*/{*.la,*.py}}
+rm -f $RPM_BUILD_ROOT%{_libdir}/gnome-vfs-2.0/modules/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -195,6 +197,7 @@ rm -rf $RPM_BUILD_ROOT
 %files vfs
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomevfs*.so
+%attr(755,root,root) %{_libdir}/gnome-vfs-2.0/modules/*.so
 %{py_sitedir}/gtk-2.0/gnome/vfs.py[co]
 
 %files devel
