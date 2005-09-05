@@ -1,21 +1,21 @@
 %define		module		gnome-python
-%define		pygtk_req	2:2.6.0
+%define		pygtk_req	2:2.8.0
 %define		pyorbit_req	2.0.1
 Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
-Version:	2.10.0
-Release:	2
+Version:	2.12.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.10/%{module}-%{version}.tar.bz2
-# Source0-md5:	018c210bc5e2e9be36791bede9dbdc73
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.12/%{module}-%{version}.tar.bz2
+# Source0-md5:	5a8f636a0cf8f179094287017f69bc39
 BuildRequires:	GConf2-devel >= 2.9.90
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRequires:	gnome-common >= 2.8.0
 BuildRequires:	gnome-vfs2-devel >= 2.10.0-2
-BuildRequires:	gtk+2-devel >= 2:2.6.4
+BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	libbonobo-devel >= 2.8.1
 BuildRequires:	libgnomeui-devel >= 2.10.0-2
 BuildRequires:	libtool
@@ -107,6 +107,7 @@ Summary:	GNOME VFS bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki GNOME VFS
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
+Requires:	gnome-vfs2
 
 %description vfs
 GNOME VFS bindings for Python.
@@ -151,6 +152,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{py_sitedir}/gtk-2.0/{*.la,*/{*.la,*.py}}
+rm -f $RPM_BUILD_ROOT%{_libdir}/gnome-vfs-2.0/modules/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -195,9 +197,11 @@ rm -rf $RPM_BUILD_ROOT
 %files vfs
 %defattr(644,root,root,755)
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomevfs*.so
+%attr(755,root,root) %{_libdir}/gnome-vfs-2.0/modules/*.so
 %{py_sitedir}/gtk-2.0/gnome/vfs.py[co]
 
 %files devel
 %defattr(644,root,root,755)
+%{_includedir}/%{module}-2.0
 %{pydefsdir}/*
 %{_pkgconfigdir}/*
