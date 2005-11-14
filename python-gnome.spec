@@ -5,7 +5,7 @@ Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.12.1
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.12/%{module}-%{version}.tar.bz2
@@ -133,6 +133,18 @@ Development files for GNOME bindings for Python.
 %description devel -l pl
 Pliki programistyczne wi±zañ Pythona do GNOME.
 
+%package examples
+Summary:        Example programs for python-gnome
+Summary(pl):    Przyk³adowe programy do python-gnome
+Group:          Libraries/Python
+Requires:	%{name}-devel = %{version}-%{release}
+
+%description examples
+This package contains example programs for python-gnome.
+
+%description -l pl examples
+Ten pakiet zawiera przyk³adowe programy dla python-gnome.
+
 %prep
 %setup -q -n %{module}-%{version}
 
@@ -148,8 +160,12 @@ Pliki programistyczne wi±zañ Pythona do GNOME.
 %install
 rm -rf $RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 rm -f $RPM_BUILD_ROOT%{py_sitedir}/gtk-2.0/{*.la,*/{*.la,*.py}}
 rm -f $RPM_BUILD_ROOT%{_libdir}/gnome-vfs-2.0/modules/*.la
@@ -167,6 +183,16 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitedir}/gtk-2.0/gnome/__init__.py?
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/_gnome*.so
 %dir %{_datadir}/pygtk/2.0/argtypes
+
+%files devel
+%defattr(644,root,root,755)
+%{_includedir}/%{module}-2.0
+%{pydefsdir}/*
+%{_pkgconfigdir}/*
+
+%files examples
+%defattr(644,root,root,755)
+%{_examplesdir}/%{name}-%{version}
 
 %files bonobo
 %defattr(644,root,root,755)
@@ -199,9 +225,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomevfs*.so
 %attr(755,root,root) %{_libdir}/gnome-vfs-2.0/modules/*.so
 %{py_sitedir}/gtk-2.0/gnome/vfs.py[co]
-
-%files devel
-%defattr(644,root,root,755)
-%{_includedir}/%{module}-2.0
-%{pydefsdir}/*
-%{_pkgconfigdir}/*
