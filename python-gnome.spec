@@ -134,9 +134,9 @@ Development files for GNOME bindings for Python.
 Pliki programistyczne wi±zañ Pythona do GNOME.
 
 %package examples
-Summary:        Example programs for python-gnome
-Summary(pl):    Przyk³adowe programy do python-gnome
-Group:          Libraries/Python
+Summary:	Example programs for python-gnome
+Summary(pl):	Przyk³adowe programy do python-gnome
+Group:		Libraries/Python
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description examples
