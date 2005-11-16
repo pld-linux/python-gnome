@@ -5,7 +5,7 @@ Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.12.1
-Release:	2
+Release:	3
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.12/%{module}-%{version}.tar.bz2
@@ -25,7 +25,9 @@ BuildRequires:	python-pyorbit-devel >= %{pyorbit_req}
 BuildRequires:	python-pygtk-devel >= %{pygtk_req}
 BuildRequires:	rpmbuild(macros) >= 1.197
 %pyrequires_eq	python-modules
-Requires:	python-pygtk-gobject >= %{pygtk_req}
+Requires:	%{name}-bonobo = %{version}-%{release}
+Requires:	%{name}-gconf = %{version}-%{release}
+Requires:	%{name}-vfs = %{version}-%{release}
 Obsoletes:	gnome-python
 Obsoletes:	gnome-python-nautilus
 Obsoletes:	python-gnome-nautilus
@@ -56,8 +58,10 @@ Wi±zania Pythona do biblioteki Bonobo.
 Summary:	Bonobo User Interface bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki interfejsu u¿ytkownika Bonobo
 Group:		Libraries/Python
+Requires:	%{name} = %{version}-%{release}
 Requires:	%{name}-bonobo = %{version}-%{release}
 Requires:	%{name}-canvas = %{version}-%{release}
+Requires:	%{name}-gconf = %{version}-%{release}
 
 %description bonobo-ui
 Bonobo User Interface bindings for Python.
@@ -69,7 +73,6 @@ Wi±zania Pythona do biblioteki interfejsu u¿ytkownika Bonobo.
 Summary:	GNOME Canvas bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki GNOME Canvas
 Group:		Libraries/Python
-Requires:	%{name} = %{version}-%{release}
 Requires:	python-pygtk-gtk >= %{pygtk_req}
 
 %description canvas
@@ -83,6 +86,7 @@ Summary:	GConf bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki GConf
 Group:		Libraries/Python
 Requires:	python-pygtk-gobject >= %{pygtk_req}
+Requires:	python-pyorbit >= %{pyorbit_req}
 
 %description gconf
 GConf bindings for Python.
@@ -106,7 +110,8 @@ Wi±zania Pythona do biblioteki interfejsu u¿ytkownika GNOME.
 Summary:	GNOME VFS bindings for Python
 Summary(pl):	Wi±zania Pythona do biblioteki GNOME VFS
 Group:		Libraries/Python
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name}-bonobo = %{version}-%{release}
+Requires:	%{name}-gconf = %{version}-%{release}
 Requires:	gnome-vfs2
 
 %description vfs
@@ -119,12 +124,7 @@ Wi±zania Pythona do biblioteki GNOME VFS.
 Summary:	Development files for GNOME bindings for Python
 Summary(pl):	Pliki programistyczne wi±zañ Pythona do GNOME
 Group:		Libraries/Python
-Requires:	%{name}-bonobo = %{version}-%{release}
-Requires:	%{name}-bonobo-ui = %{version}-%{release}
-Requires:	%{name}-canvas = %{version}-%{release}
-Requires:	%{name}-gconf = %{version}-%{release}
 Requires:	%{name}-ui = %{version}-%{release}
-Requires:	%{name}-vfs = %{version}-%{release}
 Requires:	python-pygtk-devel >= %{pygtk_req}
 
 %description devel
