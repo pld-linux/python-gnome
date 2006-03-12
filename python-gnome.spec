@@ -4,12 +4,12 @@
 Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
-Version:	2.12.3
+Version:	2.12.4
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.12/%{module}-%{version}.tar.bz2
-# Source0-md5:	20c4414a837d0c6efc2f324f9142974c
+# Source0-md5:	94347f1bff86ffcce76111fa8dac1efc
 BuildRequires:	GConf2-devel >= 2.9.90
 BuildRequires:	automake
 BuildRequires:	autoconf
