@@ -5,7 +5,7 @@ Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.12.4
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.12/%{module}-%{version}.tar.bz2
@@ -113,7 +113,6 @@ Summary(pl):	Wi±zania Pythona do biblioteki GNOME VFS
 Group:		Libraries/Python
 Requires:	%{name}-bonobo = %{version}-%{release}
 Requires:	%{name}-gconf = %{version}-%{release}
-Requires:	gnome-vfs2
 
 %description vfs
 GNOME VFS bindings for Python.
