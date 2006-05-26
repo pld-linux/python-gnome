@@ -144,7 +144,7 @@ Requires:	%{name}-devel = %{version}-%{release}
 %description examples
 This package contains example programs for python-gnome.
 
-%description -l pl examples
+%description examples -l pl
 Ten pakiet zawiera przyk³adowe programy dla python-gnome.
 
 %prep
