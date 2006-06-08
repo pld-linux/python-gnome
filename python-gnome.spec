@@ -47,7 +47,7 @@ Wi您ania Pythona do bibliotek GNOME.
 Summary:	Bonobo bindings for Python
 Summary(pl):	Wi您ania Pythona do biblioteki Bonobo
 Group:		Libraries/Python
-Requires:	python-pygobject >= %{pygtk_req}
+Requires:	python-pygobject >= 2.10.0
 Requires:	python-pyorbit >= %{pyorbit_req}
 
 %description bonobo
@@ -88,7 +88,7 @@ Wi您ania Pythona do biblioteki GNOME Canvas.
 Summary:	GConf bindings for Python
 Summary(pl):	Wi您ania Pythona do biblioteki GConf
 Group:		Libraries/Python
-Requires:	python-pygobject >= %{pygtk_req}
+Requires:	python-pygobject >= 2.10.0
 Requires:	python-pyorbit >= %{pyorbit_req}
 
 %description gconf
