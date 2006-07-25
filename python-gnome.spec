@@ -4,20 +4,20 @@
 Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
-Version:	2.15.4
+Version:	2.15.90
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.15/%{module}-%{version}.tar.bz2
-# Source0-md5:	d97bbe81bb6c3a2a02740d5af9eb1d2a
+# Source0-md5:	192e7bf570b76ca3749fad3778abefe7
 BuildRequires:	GConf2-devel >= 2.14.0
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRequires:	gnome-common >= 2.12.0
-BuildRequires:	gnome-vfs2-devel >= 2.15.3
-BuildRequires:	gtk+2-devel >= 2:2.10.0
+BuildRequires:	gnome-vfs2-devel >= 2.15.90
+BuildRequires:	gtk+2-devel >= 2:2.10.1
 BuildRequires:	libbonobo-devel >= 2.15.0
-BuildRequires:	libgnomeui-devel >= 2.15.2
+BuildRequires:	libgnomeui-devel >= 2.15.90
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	python-devel >= 1:2.3.2
@@ -29,7 +29,7 @@ BuildRequires:	rpmbuild(macros) >= 1.197
 Requires:	%{name}-bonobo = %{version}-%{release}
 Requires:	%{name}-gconf = %{version}-%{release}
 Requires:	%{name}-vfs = %{version}-%{release}
-Requires:	libgnomeui >= 2.15.2
+Requires:	libgnomeui >= 2.15.90
 Obsoletes:	gnome-python
 Obsoletes:	gnome-python-nautilus
 Obsoletes:	python-gnome-nautilus
@@ -224,6 +224,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files vfs
 %defattr(644,root,root,755)
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomevfs*.so
+%dir %{py_sitedir}/gtk-2.0/gnomevfs
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomevfs/*.so
 %attr(755,root,root) %{_libdir}/gnome-vfs-2.0/modules/*.so
+%{py_sitedir}/gtk-2.0/gnomevfs/*.py[co]
 %{py_sitedir}/gtk-2.0/gnome/vfs.py[co]
