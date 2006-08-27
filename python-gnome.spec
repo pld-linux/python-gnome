@@ -5,7 +5,7 @@ Summary:	GNOME bindings for Python
 Summary(pl):	Wi±zania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.15.91
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.15/%{module}-%{version}.tar.bz2
@@ -20,6 +20,7 @@ BuildRequires:	libbonobo-devel >= 2.15.2
 BuildRequires:	libgnomeui-devel >= 2.15.91
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
+BuildRequires:	popt-devel
 BuildRequires:	python-devel >= 1:2.3.2
 BuildRequires:	python-pyorbit-devel >= %{pyorbit_req}
 BuildRequires:	python-pygtk-devel >= %{pygtk_req}
