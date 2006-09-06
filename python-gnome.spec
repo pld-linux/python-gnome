@@ -1,23 +1,23 @@
 %define		module		gnome-python
-%define		pygtk_req	2:2.9.6
+%define		pygtk_req	2:2.10.1
 %define		pyorbit_req	2.14.1
 Summary:	GNOME bindings for Python
 Summary(pl):	Wi您ania Pythona do bibliotek GNOME
 Name:		python-gnome
-Version:	2.15.91
-Release:	2
+Version:	2.16.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.15/%{module}-%{version}.tar.bz2
-# Source0-md5:	d06c1cc0d715d9819f30ce5546dc07df
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.16/%{module}-%{version}.tar.bz2
+# Source0-md5:	65c71b08cdae600bf8cc31597682d595
 BuildRequires:	GConf2-devel >= 2.14.0
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRequires:	gnome-common >= 2.12.0
-BuildRequires:	gnome-vfs2-devel >= 2.15.92
-BuildRequires:	gtk+2-devel >= 2:2.10.2
-BuildRequires:	libbonobo-devel >= 2.15.2
-BuildRequires:	libgnomeui-devel >= 2.15.91
+BuildRequires:	gnome-vfs2-devel >= 2.16.0
+BuildRequires:	gtk+2-devel >= 2:2.10.3
+BuildRequires:	libbonobo-devel >= 2.16.0
+BuildRequires:	libgnomeui-devel >= 2.16.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel
@@ -30,7 +30,7 @@ BuildRequires:	rpmbuild(macros) >= 1.197
 Requires:	%{name}-bonobo = %{version}-%{release}
 Requires:	%{name}-gconf = %{version}-%{release}
 Requires:	%{name}-vfs = %{version}-%{release}
-Requires:	libgnomeui >= 2.15.91
+Requires:	libgnomeui >= 2.16.0
 Obsoletes:	gnome-python
 Obsoletes:	gnome-python-nautilus
 Obsoletes:	python-gnome-nautilus
@@ -48,7 +48,7 @@ Wi您ania Pythona do bibliotek GNOME.
 Summary:	Bonobo bindings for Python
 Summary(pl):	Wi您ania Pythona do biblioteki Bonobo
 Group:		Libraries/Python
-Requires:	python-pygobject >= 2.11.3
+Requires:	python-pygobject >= 2.12.1
 Requires:	python-pyorbit >= %{pyorbit_req}
 
 %description bonobo
@@ -89,7 +89,7 @@ Wi您ania Pythona do biblioteki GNOME Canvas.
 Summary:	GConf bindings for Python
 Summary(pl):	Wi您ania Pythona do biblioteki GConf
 Group:		Libraries/Python
-Requires:	python-pygobject >= 2.11.3
+Requires:	python-pygobject >= 2.12.1
 Requires:	python-pyorbit >= %{pyorbit_req}
 
 %description gconf
