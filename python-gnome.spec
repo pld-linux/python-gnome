@@ -2,7 +2,7 @@
 %define		pygtk_req	2:2.10.3
 %define		pyorbit_req	2.14.1
 Summary:	GNOME bindings for Python
-Summary(pl):	Wi±zania Pythona do bibliotek GNOME
+Summary(pl.UTF-8):   WiƒÖzania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.16.2
 Release:	1
@@ -41,12 +41,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 GNOME bindings for Python.
 
-%description -l pl
-Wi±zania Pythona do bibliotek GNOME.
+%description -l pl.UTF-8
+WiƒÖzania Pythona do bibliotek GNOME.
 
 %package bonobo
 Summary:	Bonobo bindings for Python
-Summary(pl):	Wi±zania Pythona do biblioteki Bonobo
+Summary(pl.UTF-8):   WiƒÖzania Pythona do biblioteki Bonobo
 Group:		Libraries/Python
 Requires:	python-pygobject >= 2.12.2
 Requires:	python-pyorbit >= %{pyorbit_req}
@@ -54,12 +54,12 @@ Requires:	python-pyorbit >= %{pyorbit_req}
 %description bonobo
 Bonobo bindings for Python.
 
-%description bonobo -l pl
-Wi±zania Pythona do biblioteki Bonobo.
+%description bonobo -l pl.UTF-8
+WiƒÖzania Pythona do biblioteki Bonobo.
 
 %package bonobo-ui
 Summary:	Bonobo User Interface bindings for Python
-Summary(pl):	Wi±zania Pythona do biblioteki interfejsu uøytkownika Bonobo
+Summary(pl.UTF-8):   WiƒÖzania Pythona do biblioteki interfejsu u≈ºytkownika Bonobo
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 Requires:	%{name}-bonobo = %{version}-%{release}
@@ -70,24 +70,24 @@ Requires:	%{name}-vfs = %{version}-%{release}
 %description bonobo-ui
 Bonobo User Interface bindings for Python.
 
-%description bonobo-ui -l pl
-Wi±zania Pythona do biblioteki interfejsu uøytkownika Bonobo.
+%description bonobo-ui -l pl.UTF-8
+WiƒÖzania Pythona do biblioteki interfejsu u≈ºytkownika Bonobo.
 
 %package canvas
 Summary:	GNOME Canvas bindings for Python
-Summary(pl):	Wi±zania Pythona do biblioteki GNOME Canvas
+Summary(pl.UTF-8):   WiƒÖzania Pythona do biblioteki GNOME Canvas
 Group:		Libraries/Python
 Requires:	python-pygtk-gtk >= %{pygtk_req}
 
 %description canvas
 GNOME Canvas bindings for Python.
 
-%description canvas -l pl
-Wi±zania Pythona do biblioteki GNOME Canvas.
+%description canvas -l pl.UTF-8
+WiƒÖzania Pythona do biblioteki GNOME Canvas.
 
 %package gconf
 Summary:	GConf bindings for Python
-Summary(pl):	Wi±zania Pythona do biblioteki GConf
+Summary(pl.UTF-8):   WiƒÖzania Pythona do biblioteki GConf
 Group:		Libraries/Python
 Requires:	python-pygobject >= 2.12.2
 Requires:	python-pyorbit >= %{pyorbit_req}
@@ -95,24 +95,24 @@ Requires:	python-pyorbit >= %{pyorbit_req}
 %description gconf
 GConf bindings for Python.
 
-%description gconf -l pl
-Wi±zania Pythona do biblioteki GConf.
+%description gconf -l pl.UTF-8
+WiƒÖzania Pythona do biblioteki GConf.
 
 %package ui
 Summary:	GNOME User Interface bindings for Python
-Summary(pl):	Wi±zania Pythona do biblioteki interfejsu uøytkownika GNOME
+Summary(pl.UTF-8):   WiƒÖzania Pythona do biblioteki interfejsu u≈ºytkownika GNOME
 Group:		Libraries/Python
 Requires:	%{name}-bonobo-ui = %{version}-%{release}
 
 %description ui
 GNOME User Interface bindings for Python.
 
-%description ui -l pl
-Wi±zania Pythona do biblioteki interfejsu uøytkownika GNOME.
+%description ui -l pl.UTF-8
+WiƒÖzania Pythona do biblioteki interfejsu u≈ºytkownika GNOME.
 
 %package vfs
 Summary:	GNOME VFS bindings for Python
-Summary(pl):	Wi±zania Pythona do biblioteki GNOME VFS
+Summary(pl.UTF-8):   WiƒÖzania Pythona do biblioteki GNOME VFS
 Group:		Libraries/Python
 Requires:	%{name}-bonobo = %{version}-%{release}
 Requires:	%{name}-gconf = %{version}-%{release}
@@ -120,12 +120,12 @@ Requires:	%{name}-gconf = %{version}-%{release}
 %description vfs
 GNOME VFS bindings for Python.
 
-%description vfs -l pl
-Wi±zania Pythona do biblioteki GNOME VFS.
+%description vfs -l pl.UTF-8
+WiƒÖzania Pythona do biblioteki GNOME VFS.
 
 %package devel
 Summary:	Development files for GNOME bindings for Python
-Summary(pl):	Pliki programistyczne wi±zaÒ Pythona do GNOME
+Summary(pl.UTF-8):   Pliki programistyczne wiƒÖza≈Ñ Pythona do GNOME
 Group:		Libraries/Python
 Requires:	%{name}-ui = %{version}-%{release}
 Requires:	python-pygtk-devel >= %{pygtk_req}
@@ -133,20 +133,20 @@ Requires:	python-pygtk-devel >= %{pygtk_req}
 %description devel
 Development files for GNOME bindings for Python.
 
-%description devel -l pl
-Pliki programistyczne wi±zaÒ Pythona do GNOME.
+%description devel -l pl.UTF-8
+Pliki programistyczne wiƒÖza≈Ñ Pythona do GNOME.
 
 %package examples
 Summary:	Example programs for python-gnome
-Summary(pl):	Przyk≥adowe programy do python-gnome
+Summary(pl.UTF-8):   Przyk≈Çadowe programy do python-gnome
 Group:		Libraries/Python
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description examples
 This package contains example programs for python-gnome.
 
-%description examples -l pl
-Ten pakiet zawiera przyk≥adowe programy dla python-gnome.
+%description examples -l pl.UTF-8
+Ten pakiet zawiera przyk≈Çadowe programy dla python-gnome.
 
 %prep
 %setup -q -n %{module}-%{version}
