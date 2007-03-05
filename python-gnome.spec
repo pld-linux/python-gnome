@@ -1,36 +1,36 @@
 %define		module		gnome-python
-%define		pygtk_req	2:2.10.3
-%define		pyorbit_req	2.14.1
+%define		pygtk_req	2:2.10.4
+%define		pyorbit_req	2.14.2
 Summary:	GNOME bindings for Python
 Summary(pl.UTF-8):	Wiązania Pythona do bibliotek GNOME
 Name:		python-gnome
-Version:	2.16.2
+Version:	2.17.92
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.16/%{module}-%{version}.tar.bz2
-# Source0-md5:	b365a772c8c9eac24b368c7e26845dc8
-BuildRequires:	GConf2-devel >= 2.16.0
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.17/%{module}-%{version}.tar.bz2
+# Source0-md5:	58cc0283c6bdd794de7cf898a9bdafe2
+BuildRequires:	GConf2-devel >= 2.18.0
+BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
-BuildRequires:	autoconf
 BuildRequires:	gnome-common >= 2.12.0
-BuildRequires:	gnome-vfs2-devel >= 2.16.1
-BuildRequires:	gtk+2-devel >= 2:2.10.6
-BuildRequires:	libbonobo-devel >= 2.16.0
-BuildRequires:	libgnomeui-devel >= 2.16.1
+BuildRequires:	gnome-vfs2-devel >= 2.17.91
+BuildRequires:	gtk+2-devel >= 2:2.10.9
+BuildRequires:	libbonoboui-devel >= 2.17.94
+BuildRequires:	libgnomeui-devel >= 2.17.92
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel
 BuildRequires:	python-devel >= 1:2.3.2
-BuildRequires:	python-pyorbit-devel >= %{pyorbit_req}
 BuildRequires:	python-pygtk-devel >= %{pygtk_req}
+BuildRequires:	python-pyorbit-devel >= %{pyorbit_req}
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.197
 %pyrequires_eq	python-modules
 Requires:	%{name}-bonobo = %{version}-%{release}
 Requires:	%{name}-gconf = %{version}-%{release}
 Requires:	%{name}-vfs = %{version}-%{release}
-Requires:	libgnomeui >= 2.16.1
+Requires:	libgnomeui >= 2.17.92
 Obsoletes:	gnome-python
 Obsoletes:	gnome-python-nautilus
 Obsoletes:	python-gnome-nautilus
