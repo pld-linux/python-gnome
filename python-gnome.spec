@@ -4,20 +4,20 @@
 Summary:	GNOME bindings for Python
 Summary(pl.UTF-8):	Wiązania Pythona do bibliotek GNOME
 Name:		python-gnome
-Version:	2.17.92
+Version:	2.18.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.17/%{module}-%{version}.tar.bz2
-# Source0-md5:	58cc0283c6bdd794de7cf898a9bdafe2
-BuildRequires:	GConf2-devel >= 2.18.0
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.18/%{module}-%{version}.tar.bz2
+# Source0-md5:	75400e51abe3cedb785db40960cbad53
+BuildRequires:	GConf2-devel >= 2.18.0.1
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	gnome-common >= 2.12.0
-BuildRequires:	gnome-vfs2-devel >= 2.17.91
+BuildRequires:	gnome-vfs2-devel >= 2.18.0
 BuildRequires:	gtk+2-devel >= 2:2.10.9
-BuildRequires:	libbonoboui-devel >= 2.17.94
-BuildRequires:	libgnomeui-devel >= 2.17.92
+BuildRequires:	libbonoboui-devel >= 2.18.0
+BuildRequires:	libgnomeui-devel >= 2.18.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel
@@ -30,7 +30,7 @@ BuildRequires:	rpmbuild(macros) >= 1.197
 Requires:	%{name}-bonobo = %{version}-%{release}
 Requires:	%{name}-gconf = %{version}-%{release}
 Requires:	%{name}-vfs = %{version}-%{release}
-Requires:	libgnomeui >= 2.17.92
+Requires:	libgnomeui >= 2.18.0
 Obsoletes:	gnome-python
 Obsoletes:	gnome-python-nautilus
 Obsoletes:	python-gnome-nautilus
