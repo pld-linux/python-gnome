@@ -4,20 +4,20 @@
 Summary:	GNOME bindings for Python
 Summary(pl.UTF-8):	Wiązania Pythona do bibliotek GNOME
 Name:		python-gnome
-Version:	2.18.0
+Version:	2.18.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.18/%{module}-%{version}.tar.bz2
-# Source0-md5:	75400e51abe3cedb785db40960cbad53
+# Source0-md5:	5fa614cec83de56d05a964f93ef9dd4e
 BuildRequires:	GConf2-devel >= 2.18.0.1
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
-BuildRequires:	gnome-common >= 2.12.0
-BuildRequires:	gnome-vfs2-devel >= 2.18.0
-BuildRequires:	gtk+2-devel >= 2:2.10.9
+BuildRequires:	gnome-common >= 2.18.0
+BuildRequires:	gnome-vfs2-devel >= 2.18.0.1
+BuildRequires:	gtk+2-devel >= 2:2.10.10
 BuildRequires:	libbonoboui-devel >= 2.18.0
-BuildRequires:	libgnomeui-devel >= 2.18.0
+BuildRequires:	libgnomeui-devel >= 2.18.1
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel
@@ -30,7 +30,7 @@ BuildRequires:	rpmbuild(macros) >= 1.197
 Requires:	%{name}-bonobo = %{version}-%{release}
 Requires:	%{name}-gconf = %{version}-%{release}
 Requires:	%{name}-vfs = %{version}-%{release}
-Requires:	libgnomeui >= 2.18.0
+Requires:	libgnomeui >= 2.18.1
 Obsoletes:	gnome-python
 Obsoletes:	gnome-python-nautilus
 Obsoletes:	python-gnome-nautilus
