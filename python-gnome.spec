@@ -1,23 +1,23 @@
 %define		module		gnome-python
-%define		pygtk_req	2:2.10.4
+%define		pygtk_req	2:2.12.0
 %define		pyorbit_req	2.14.2
 Summary:	GNOME bindings for Python
 Summary(pl.UTF-8):	Wiązania Pythona do bibliotek GNOME
 Name:		python-gnome
-Version:	2.20.0
+Version:	2.20.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.20/%{module}-%{version}.tar.bz2
-# Source0-md5:	b5f17b65333f1cf6a8c0de914eb06191
-BuildRequires:	GConf2-devel >= 2.18.0.1
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-python/2.20/%{module}-%{version}.tar.bz2
+# Source0-md5:	f05d67b0f288728e703faa8f74995358
+BuildRequires:	GConf2-devel >= 2.20.0
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
-BuildRequires:	gnome-common >= 2.18.0
-BuildRequires:	gnome-vfs2-devel >= 2.18.0.1
-BuildRequires:	gtk+2-devel >= 2:2.10.10
-BuildRequires:	libbonoboui-devel >= 2.18.0
-BuildRequires:	libgnomeui-devel >= 2.18.1
+BuildRequires:	gnome-common >= 2.20.0
+BuildRequires:	gnome-vfs2-devel >= 2.20.0
+BuildRequires:	gtk+2-devel >= 2:2.12.0
+BuildRequires:	libbonoboui-devel >= 2.20.0
+BuildRequires:	libgnomeui-devel >= 2.20.1
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel
@@ -30,7 +30,7 @@ BuildRequires:	rpmbuild(macros) >= 1.197
 Requires:	%{name}-bonobo = %{version}-%{release}
 Requires:	%{name}-gconf = %{version}-%{release}
 Requires:	%{name}-vfs = %{version}-%{release}
-Requires:	libgnomeui >= 2.18.1
+Requires:	libgnomeui >= 2.20.1
 Obsoletes:	gnome-python
 Obsoletes:	gnome-python-nautilus
 Obsoletes:	python-gnome-nautilus
@@ -48,7 +48,7 @@ Wiązania Pythona do bibliotek GNOME.
 Summary:	Bonobo bindings for Python
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki Bonobo
 Group:		Libraries/Python
-Requires:	python-pygobject >= 2.12.2
+Requires:	python-pygobject >= 2.14.0
 Requires:	python-pyorbit >= %{pyorbit_req}
 
 %description bonobo
@@ -89,7 +89,7 @@ Wiązania Pythona do biblioteki GNOME Canvas.
 Summary:	GConf bindings for Python
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki GConf
 Group:		Libraries/Python
-Requires:	python-pygobject >= 2.12.2
+Requires:	python-pygobject >= 2.14.0
 Requires:	python-pyorbit >= %{pyorbit_req}
 
 %description gconf
