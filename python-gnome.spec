@@ -179,15 +179,17 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog AUTHORS
 %dir %{py_sitedir}/gtk-2.0/gnome
-%{py_sitedir}/gtk-2.0/gnome/__init__.py?
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/_gnome*.so
-%dir %{_datadir}/pygtk/2.0/argtypes
+%{py_sitedir}/gtk-2.0/gnome/__init__.py[co]
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/_gnome.so
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/%{module}-2.0
-%{pydefsdir}/*
-%{_pkgconfigdir}/*
+%{_includedir}/gnome-python-2.0
+%dir %{_datadir}/pygtk/2.0/argtypes
+%{_datadir}/pygtk/2.0/argtypes/bonobo-arg-types.py*
+%{_datadir}/pygtk/2.0/argtypes/gconf-arg-types.py*
+%{pydefsdir}/*.defs
+%{_pkgconfigdir}/gnome-python-2.0.pc
 
 %files examples
 %defattr(644,root,root,755)
@@ -196,33 +198,32 @@ rm -rf $RPM_BUILD_ROOT
 %files bonobo
 %defattr(644,root,root,755)
 %dir %{py_sitedir}/gtk-2.0/bonobo
-%{py_sitedir}/gtk-2.0/bonobo/__init__.py?
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/bonobo/_bonobo*.so
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/bonobo/activation*.so
-%{_datadir}/pygtk/2.0/argtypes/bonobo-arg-types.py*
+%{py_sitedir}/gtk-2.0/bonobo/__init__.py[co]
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/bonobo/_bonobo.so
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/bonobo/activation.so
 
 %files bonobo-ui
 %defattr(644,root,root,755)
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/bonobo/ui*.so
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/bonobo/ui.so
 
 %files canvas
 %defattr(644,root,root,755)
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomecanvas*.so
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomecanvas.so
 %{py_sitedir}/gtk-2.0/gnome/canvas.py[co]
 
 %files gconf
 %defattr(644,root,root,755)
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gconf*.so
-%{_datadir}/pygtk/2.0/argtypes/gconf-arg-types.py*
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/gconf.so
 
 %files ui
 %defattr(644,root,root,755)
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/ui*.so
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnome/ui.so
 
 %files vfs
 %defattr(644,root,root,755)
-%dir %{py_sitedir}/gtk-2.0/gnomevfs
-%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomevfs/*.so
-%attr(755,root,root) %{_libdir}/gnome-vfs-2.0/modules/*.so
-%{py_sitedir}/gtk-2.0/gnomevfs/*.py[co]
 %{py_sitedir}/gtk-2.0/gnome/vfs.py[co]
+%dir %{py_sitedir}/gtk-2.0/gnomevfs
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomevfs/_gnomevfs.so
+%attr(755,root,root) %{py_sitedir}/gtk-2.0/gnomevfs/gnomevfsbonobo.so
+%{py_sitedir}/gtk-2.0/gnomevfs/__init__.py[co]
+%attr(755,root,root) %{_libdir}/gnome-vfs-2.0/modules/libpythonmethod.so
