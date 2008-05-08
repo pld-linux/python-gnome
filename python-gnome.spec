@@ -1,11 +1,11 @@
 %define		module		gnome-python
-%define		pygtk_req	2:2.8.0
+%define		pygtk_req	2:2.12.0
 %define		pyorbit_req	2.14.0
 Summary:	GNOME bindings for Python
 Summary(pl):	Wi您ania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.12.4
-Release:	3
+Release:	4
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-python/2.12/%{module}-%{version}.tar.bz2
@@ -46,7 +46,7 @@ Wi您ania Pythona do bibliotek GNOME.
 Summary:	Bonobo bindings for Python
 Summary(pl):	Wi您ania Pythona do biblioteki Bonobo
 Group:		Libraries/Python
-Requires:	python-pygtk-gobject >= %{pygtk_req}
+Requires:	python-pygobject >= 2.12
 Requires:	python-pyorbit >= %{pyorbit_req}
 
 %description bonobo
@@ -87,7 +87,7 @@ Wi您ania Pythona do biblioteki GNOME Canvas.
 Summary:	GConf bindings for Python
 Summary(pl):	Wi您ania Pythona do biblioteki GConf
 Group:		Libraries/Python
-Requires:	python-pygtk-gobject >= %{pygtk_req}
+Requires:	python-pygobject >= 2.12
 Requires:	python-pyorbit >= %{pyorbit_req}
 
 %description gconf
