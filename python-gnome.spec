@@ -5,7 +5,7 @@ Summary:	GNOME bindings for Python
 Summary(pl.UTF-8):	Wiązania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.28.1
-Release:	4
+Release:	5
 License:	GPL v2+/LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-python/2.28/%{module}-%{version}.tar.bz2
@@ -158,16 +158,18 @@ Ten pakiet zawiera przykładowe programy dla python-gnome.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-
 ./waf install \
 	--destdir $RPM_BUILD_ROOT
 
+# waf is sucker, and does not +x executables
+find $RPM_BUILD_ROOT -name '*.so' | xargs chmod a+rx
+
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-rm -f $RPM_BUILD_ROOT%{py_sitedir}/gtk-2.0/{*.la,*/{*.la,*.py}}
-rm -f $RPM_BUILD_ROOT%{_libdir}/gnome-vfs-2.0/modules/*.la
+# waf doesn't install .la, but we want to be sure not to package them
+%{__rm} -f $RPM_BUILD_ROOT%{py_sitedir}/gtk-2.0/{*.la,*/{*.la,*.py}}
+%{__rm} -f $RPM_BUILD_ROOT%{_libdir}/gnome-vfs-2.0/modules/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
