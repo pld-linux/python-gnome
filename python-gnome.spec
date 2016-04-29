@@ -6,7 +6,7 @@ Summary:	GNOME bindings for Python
 Summary(pl.UTF-8):	Wiązania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.28.1
-Release:	9
+Release:	10
 License:	LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-python/2.28/%{module}-%{version}.tar.bz2
@@ -176,6 +176,9 @@ Pliki programistyczne wiązań Pythona do GNOME.
 Summary:	API documentation for Python GNOME bindings
 Summary(pl.UTF-8):	Dokumentacja API wiązań Pythona do GNOME
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API documentation for Python GNOME bindings.
