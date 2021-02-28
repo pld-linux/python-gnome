@@ -176,9 +176,7 @@ Pliki programistyczne wiązań Pythona do GNOME.
 Summary:	API documentation for Python GNOME bindings
 Summary(pl.UTF-8):	Dokumentacja API wiązań Pythona do GNOME
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 API documentation for Python GNOME bindings.
