@@ -6,7 +6,7 @@ Summary:	GNOME bindings for Python
 Summary(pl.UTF-8):	Wiązania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.28.1
-Release:	10
+Release:	11
 License:	LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-python/2.28/%{module}-%{version}.tar.bz2
@@ -51,7 +51,7 @@ Wiązania Pythona do bibliotek GNOME.
 Summary:	Bonobo bindings for Python
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki Bonobo
 Group:		Libraries/Python
-Requires:	libbonobo-libs >= 2.22.0
+Requires:	libbonobo >= 2.22.0
 Requires:	python-pygobject >= %{pygobject_ver}
 Requires:	python-pyorbit >= %{pyorbit_ver}
 
@@ -129,7 +129,7 @@ Summary(pl.UTF-8):	Wiązania Pythona do biblioteki GNOME VFS
 Group:		Libraries/Python
 Requires:	%{name}-common = %{version}-%{release}
 Requires:	gnome-vfs2-libs >= 2.22.0
-Requires:	libbonobo-libs >= 2.22.0
+Requires:	libbonobo >= 2.22.0
 Requires:	python-pygobject >= %{pygobject_ver}
 Requires:	python-pyorbit >= %{pyorbit_ver}
 
