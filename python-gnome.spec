@@ -6,7 +6,7 @@ Summary:	GNOME bindings for Python
 Summary(pl.UTF-8):	Wiązania Pythona do bibliotek GNOME
 Name:		python-gnome
 Version:	2.28.1
-Release:	11
+Release:	12
 License:	LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-python/2.28/%{module}-%{version}.tar.bz2
@@ -200,6 +200,10 @@ Ten pakiet zawiera przykładowe programy dla python-gnome.
 %setup -q -n %{module}-%{version}
 
 %{__sed} -i -e 's,${DATADIR}/gtk-doc/html/,%{_gtkdocdir}/,' docs/gnomevfs/wscript
+
+%{__sed} -E -i -e '1s,#!\s*/usr/bin/env\s+python(\s|$),#!%{__python}\1,' \
+      examples/*/*.py \
+      examples/*/*/*.py
 
 %build
 CC="%{__cc}" \
