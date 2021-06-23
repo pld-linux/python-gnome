@@ -9,8 +9,9 @@ Version:	2.28.1
 Release:	12
 License:	LGPL v2.1+
 Group:		Libraries/Python
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-python/2.28/%{module}-%{version}.tar.bz2
+Source0:	https://download.gnome.org/sources/gnome-python/2.28/%{module}-%{version}.tar.bz2
 # Source0-md5:	a17ad952813ed86f520de8e07194a2bf
+URL:		https://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.22.0
 BuildRequires:	glib2-devel >= 1:2.16.0
 BuildRequires:	gnome-common >= 2.20.0
@@ -216,6 +217,7 @@ CFLAGS="%{rpmcflags}" \
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 ./waf install \
 	--destdir $RPM_BUILD_ROOT
 
@@ -229,9 +231,6 @@ cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%post	-p /sbin/ldconfig
-%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
