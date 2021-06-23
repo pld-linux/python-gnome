@@ -282,7 +282,15 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/pygtk/2.0/argtypes
 %{_datadir}/pygtk/2.0/argtypes/bonobo-arg-types.py*
 %{_datadir}/pygtk/2.0/argtypes/gconf-arg-types.py*
-%{pydefsdir}/*.defs
+%{pydefsdir}/bonobo.defs
+%{pydefsdir}/bonobo-types.defs
+%{pydefsdir}/bonoboui.defs
+%{pydefsdir}/bonoboui-types.defs
+%{pydefsdir}/canvas.defs
+%{pydefsdir}/gconf.defs
+%{pydefsdir}/gnome.defs
+%{pydefsdir}/gnome-types.defs
+%{pydefsdir}/ui.defs
 %{_pkgconfigdir}/gnome-python-2.0.pc
 
 %files apidocs
